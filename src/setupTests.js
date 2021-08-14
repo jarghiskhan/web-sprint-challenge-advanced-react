@@ -38,6 +38,7 @@ test("When all inputs are filled out and the form submitted a success banner app
   userEvent.click(submitButton);
 
   expect(rtl.screen.queryByText(/you have ordered some plants!/i)).toBeTruthy();
+  expect(rtl.screen.queryByText(/fake land, FakeState 12345/i)).toBeTruthy();
 });
 
 // Clean up after the tests are finished.
